@@ -3,8 +3,9 @@ function tocaSom(seletorAudio) {
     if (elemento == null){
         console.log("Elemento não encontrado");
     }
-    if (elemento != null) {
-        if (elemento.localName === 'audio'){
+    if (elemento != null && elemento.localName === 'audio'){
+        //!= significa diferente e o && signifia dentro dessa função quer se o elemento for diferente
+        //de nulo E tbm possuir o nome audio irá executar.
             elemento.play();
         }
     }
@@ -26,6 +27,7 @@ for (let contador = 0; contador < listaDeTeclas.length; contador ++){
     }
     tecla.onkeydown = function(evento){
         if (evento.code === 'Enter' || evento.code === 'Space') {
+            //A || significa OU
             tecla.classList.add('ativa');
             }
     }
