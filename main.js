@@ -1,16 +1,14 @@
 function tocaSom(seletorAudio) {
-    const elemento = document.querySelector(seletorAudio)
-    if (elemento == null){
-        console.log("Elemento não encontrado");
-    }
-    if (elemento != null && elemento.localName === 'audio'){
+    const elemento = document.querySelector(seletorAudio);
+    if (elemento && elemento.localName === 'audio'){
         //!= significa diferente e o && signifia dentro dessa função quer se o elemento for diferente
         //de nulo E tbm possuir o nome audio irá executar.
             elemento.play();
         }
+        else {
+            console.log("Elemento ou seletor não encontrado");
+        }
     }
-// elemento.play()
-}
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
